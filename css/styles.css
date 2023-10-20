@@ -12,7 +12,6 @@
 
 body {
   width: 1600px;
-  margin: 0;
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
@@ -25,24 +24,17 @@ body {
   outline: 2px solid tomato;
 }
 
-img {
-  display: block;
-}
-
 /* Шапка */
 
-.header-underline {
-  width: 1600px;
-  height: 1px;
-  background-color: var(--header-underline-color);
-}
-
-/* .page-nav {
+.header-container {
   display: flex;
   align-items: center;
-} */
+}
 
 .logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
@@ -56,15 +48,23 @@ img {
   color: var(--logo-black-color);
 }
 
-/* .nav {
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav .list {
   display: flex;
 }
 
-.nav .item:not(:last-child) {
-  margin-right: 50px;
-} */
+.nav .item + .item {
+  margin-left: 50px;
+}
 
 .nav .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--secondary-text-color);
   font-size: 14px;
   font-weight: 500;
@@ -73,15 +73,18 @@ img {
   text-decoration: none;
 }
 
-/* .info {
+.info {
   display: flex;
-} */
+  margin-left: auto;
+}
 
-.info .item:not(:last-child) {
-  margin-right: 40px;
+.info .item + .item {
+  margin-left: 40px;
 }
 
 .info .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--primary-text-color);
   font-size: 14px;
   font-weight: 500;
@@ -104,10 +107,10 @@ img {
   color: var(--accent-color);
 }
 
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.header-underline {
+  width: 1600px;
+  height: 1px;
+  background-color: var(--header-underline-color);
 }
 
 .section {
@@ -172,6 +175,10 @@ img {
 
 /* Чим ми займаємося */
 
+img {
+  display: block;
+}
+
 .examples .title,
 .team .title {
   margin-top: 0;
@@ -213,8 +220,8 @@ img {
 
 /* Портфоліо */
 
-.section .portfolio {
-  padding-top: 0;
+.portfolio .list {
+  margin-bottom: 50px;
 }
 
 .portfolio .list-button {
