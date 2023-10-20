@@ -1,6 +1,7 @@
 :root {
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
+  --header-underline-color: #ececec;
   --logo-black-color: #000000;
   --accent-color: #2196f3;
   --primary-text-color: #757575;
@@ -24,7 +25,22 @@ body {
   outline: 2px solid tomato;
 }
 
+img {
+  display: block;
+}
+
 /* Шапка */
+
+.header-underline {
+  width: 1600px;
+  height: 1px;
+  background-color: var(--header-underline-color);
+}
+
+/* .page-nav {
+  display: flex;
+  align-items: center;
+} */
 
 .logo {
   color: var(--accent-color);
@@ -40,11 +56,13 @@ body {
   color: var(--logo-black-color);
 }
 
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* .nav {
+  display: flex;
 }
+
+.nav .item:not(:last-child) {
+  margin-right: 50px;
+} */
 
 .nav .link {
   color: var(--secondary-text-color);
@@ -53,6 +71,14 @@ body {
   line-height: 1.2;
   letter-spacing: 0.28px;
   text-decoration: none;
+}
+
+/* .info {
+  display: flex;
+} */
+
+.info .item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .info .link {
@@ -76,6 +102,12 @@ body {
 .info .link:hover,
 .info .link:focus {
   color: var(--accent-color);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .section {
@@ -170,8 +202,7 @@ body {
 }
 
 .team .card-text {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0;
   color: var(--primary-text-color);
   text-align: center;
   font-size: 16px;
@@ -182,7 +213,13 @@ body {
 
 /* Портфоліо */
 
+.section .portfolio {
+  padding-top: 0;
+}
+
 .portfolio .list-button {
+  border-radius: 4px;
+  padding: 6px 22px;
   color: var(--secondary-text-color);
   background-color: var(--secondary-bg-color);
   text-align: center;
