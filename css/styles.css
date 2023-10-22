@@ -158,10 +158,15 @@ header {
 }
 
 .hero-button {
-  font-family: inherit;
+  padding: 10px 24px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.96px;
+  text-align: center;
 
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
