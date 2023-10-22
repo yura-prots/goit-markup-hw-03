@@ -11,8 +11,6 @@
 }
 
 body {
-  width: 1600px;
-
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 
@@ -34,9 +32,18 @@ body {
   padding-left: 15px;
 }
 
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 /* Шапка */
 
-.header-container {
+header {
+  border-bottom: 1px solid var(--header-underline-color);
+}
+
+.header .container {
   display: flex;
   align-items: center;
 }
@@ -117,13 +124,6 @@ body {
   color: var(--accent-color);
 }
 
-.header-underline {
-  width: 1600px;
-  height: 1px;
-
-  background-color: var(--header-underline-color);
-}
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -141,8 +141,11 @@ body {
 }
 
 .hero .title {
+  width: 696px;
   margin-top: 0;
-  margin-bottom: 30;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
 
   font-size: 44px;
   font-weight: 900;
@@ -211,6 +214,10 @@ body {
 
 img {
   display: block;
+}
+
+.examples {
+  padding-top: 0;
 }
 
 .examples .title,
@@ -347,6 +354,7 @@ img {
 .works .card {
   padding: 20px 24px;
   border: 1px solid #eee;
+  border-top: none;
 }
 
 .portfolio .card-title {
@@ -375,6 +383,8 @@ img {
 
 .footer {
   background-color: var(--hero-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer .container {
@@ -384,8 +394,9 @@ img {
 
 .footer .logo {
   margin: 0;
-  padding-top: 60px;
-  padding-bottom: 28px;
+  margin-bottom: 28px;
+  padding: 0;
+  width: 145px;
 }
 
 .logo-studio-white {
@@ -395,6 +406,7 @@ img {
 .address {
   display: flex;
   flex-direction: column;
+  width: 207px;
 
   font-style: normal;
   font-size: 14px;
@@ -411,6 +423,8 @@ img {
 }
 
 .address .link {
+  margin-bottom: 12px;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
@@ -418,11 +432,6 @@ img {
   text-decoration: none;
 
   color: var(--address-text-color);
-}
-
-.address .link:last-child {
-  padding-top: 12px;
-  padding-bottom: 60px;
 }
 
 .address .link:hover,
